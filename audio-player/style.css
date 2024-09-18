@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600&display=swap');
 
 :root {
   --primary-clr: rgba(228, 228, 229, 1);
@@ -8,7 +8,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Nunito", sans-serif;
+  font-family: 'Nunito', sans-serif;
 }
 
 body {
@@ -18,12 +18,13 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  width: 100%;
-  background: url(https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/8727c9b1-be21-4932-a221-4257b59a74dd);
+  max-width: 100%;
+  background: url(./img/fon.jpg);
   background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  animation: slidein 120s forwards infinite alternate;
 }
 
 @keyframes slidein {
@@ -45,13 +46,18 @@ body {
 .swiper {
   width: 100%;
   padding: 40px 0 100px;
+  display: flex;
 }
-
+.swiper-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
 .swiper-slide {
   position: relative;
   max-width: 200px;
   aspect-ratio: 1/1;
   border-radius: 10px;
+  display: flex;
 }
 
 .swiper-slide img {
@@ -105,7 +111,15 @@ body {
   padding: 10px 30px;
   border-radius: 20px;
 }
-
+.song-img-block {
+  width: 90%;
+}
+.song-img-block img {
+  object-fit: contain;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(5, 36, 28, 0.3);
+}
 .music-player h1 {
   font-size: 1.5rem;
   font-weight: 600;
