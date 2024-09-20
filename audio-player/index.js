@@ -3,6 +3,8 @@ const name = document.querySelector('.song__name');
 const audio = document.querySelector('#song');
 const playBtn = document.querySelector('.play-pause-btn');
 const controlIcon = document.querySelector('#controlIcon');
+const backward = document.querySelector('.backward');
+const forward = document.querySelector('.forward');
 const songs = [
   {
     title: 'Symphony',
@@ -55,7 +57,7 @@ loadSong(indexOfSong);
 
 //Включение и отключение трека трека
 let play = false;
-function playSong() {
+function playCurrentSong() {
   if (!play) {
     play = true;
     audio.play();
@@ -68,9 +70,20 @@ function playSong() {
     controlIcon.classList.add('fa-play');
   }
 }
+function playNotCurrentSong(index) {
+  indexOfSong =
+    index < 0 ? songs.length - 1 : index > songs.length - 1 ? 0 : index;
+  loadSong(indexOfSong);
+  play = true;
+  audio.play();
+  controlIcon.classList.remove('fa-play');
+  controlIcon.classList.add('fa-pause');
+}
 
 function pauseSong() {
   audio.pause();
 }
 
-playBtn.addEventListener('click', playSong);
+playBtn.addEventListener('click', playCurrentSong);
+backward.addEventListener('click', () => playNotCurrentSong(indexOfSong - 1));
+forward.addEventListener('click', () => playNotCurrentSong(indexOfSong + 1));
