@@ -48,11 +48,14 @@
     <p class="song__name">Song Name</p>
 
     <audio id="song">
-      <source src="song-list/Luke-Bergs-Gold.mp3" type="audio/mpeg" />
+      <source  type="audio/mpeg" />
     </audio>
 
     <input type="range" value="0" id="progress" />
-
+    <div class="time">
+        <div class="current-time">00:00</div>
+        <div class="duration"></div>
+    </div>
     <div class="controls">
       <button class="backward">
         <i class="fa-solid fa-backward"></i>
@@ -65,6 +68,18 @@
       </button>
     </div>
   </div>
+  <footer>
+    <a href="https://github.com/VeneraAleksandrova"  target="_blank" >
+            
+          <img src="./img/github.svg" alt="github">
+    </a>
+        <p>2024</p>
+        <a href="https://rs.school/courses/javascript-preschool-ru"  target="_blank" >
+            
+            <img src="./img/rss-logo.svg" alt="logo">
+      </a>
+        
+  </footer>
 </body>
 
 <script src="./index.js"></script>

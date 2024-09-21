@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600&display=swap");
 
 :root {
   --primary-clr: rgba(228, 228, 229, 1);
@@ -8,7 +8,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
 body {
@@ -142,8 +142,9 @@ body {
   height: 7px;
   background: rgba(163, 162, 164, 0.4);
   border-radius: 4px;
-  margin: 32px 0 24px;
+  margin: 32px 0 10px;
   cursor: pointer;
+  transition: all 0.3s linear;
 }
 
 #progress::-webkit-slider-thumb {
@@ -193,4 +194,33 @@ body {
 
 .controls button:nth-child(2):is(:hover, :focus-visible) {
   transform: scale(1.25);
+}
+
+.time {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10%;
+  color: rgba(228, 228, 229, 1);
+  align-items: center;
+  padding: 0 10px;
+}
+
+footer a {
+  display: block;
+  width: 5%;
+}
+
+footer svg {
+  width: 10%;
 }
